@@ -1,7 +1,7 @@
 import { Text } from 'react-native';
 
 function AllExpenses() {
-    return <Text> AllExpenses</Text>
+    return <Text> All Expenses</Text>
 }
 
 export default AllExpenses;
