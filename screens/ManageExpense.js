@@ -1,11 +1,9 @@
 import { useLayoutEffect } from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 import { GlobalStyles } from '../components/constants/styles';
+import Button from '../components/UI/Button';
 import IconButton from '../components/UI/IconButton';
 
-function deleteExpenseHandler() {
-
-}
 
 
 function ManageExpense({ route, navigation }) {
@@ -19,8 +17,26 @@ function ManageExpense({ route, navigation }) {
     }, [navigation, isEditing]);
     // if we have no expense ID, then we are adding. If we have expense ID, then we are editing
 
+    function deleteExpenseHandler() {
+        navigation.goBack(); // goes back to the screen
+    }
+
+    function cancelHandler() {
+        navigation.goBack();
+    }
+
+    function confirmHandler() {
+        navigation.goBack();
+    }
+
     return (
         <View style={styles.container}>
+            <View style={styles.buttons}>
+                <Button style={styles.button} mode='flat' onPress={cancelHandler}>
+                    Cancel
+                </Button>
+                <Button style={styles.button} onPress={confirmHandler}> {isEditing ? 'Update' : 'Add'} </Button>
+            </View>
             {isEditing && (
                 <View style={styles.deleteContainer}>
                     <IconButton icon="trash"
@@ -42,6 +58,15 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 24,
         backgroundColor: GlobalStyles.colors.primary800
+    },
+    buttons: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    button: {
+        minWidth: 120,
+        marginHorizontal: 8
     },
     deleteContainer: {
         marginTop: 16,
