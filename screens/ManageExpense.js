@@ -1,12 +1,16 @@
-import { useLayoutEffect } from 'react';
+import { useContext, useLayoutEffect } from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 import { GlobalStyles } from '../components/constants/styles';
 import Button from '../components/UI/Button';
 import IconButton from '../components/UI/IconButton';
+import { ExpensesContext } from '../store/expense-context';
 
 
 
 function ManageExpense({ route, navigation }) {
+
+    const expensesCtx = useContext(ExpensesContext);
+
     const editedExpenseId = route.params?.expenseId; //conditional operator used to check if params is undefined
     const isEditing = !!editedExpenseId; // this is a boolean
 
@@ -18,6 +22,7 @@ function ManageExpense({ route, navigation }) {
     // if we have no expense ID, then we are adding. If we have expense ID, then we are editing
 
     function deleteExpenseHandler() {
+        expensesCtx.deleteExpense(editedExpenseId);
         navigation.goBack(); // goes back to the screen
     }
 
