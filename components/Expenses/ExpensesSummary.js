@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
 
     container: {
         padding: 8,
-        backgroundColor: GlobalStyles.colors.primary50,
+        // backgroundColor: GlobalStyles.colors.primary50,
+        backgroundColor: 'white',
         borderRadius: 5,
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -29,11 +30,12 @@ const styles = StyleSheet.create({
     },
     period: {
         fontSize: 12,
-        color: GlobalStyles.colors.primary500
+        color: GlobalStyles.colors.primary800
     },
     sum: {
         fontSize: 16,
         fontWeight: 'bold',
-        color: GlobalStyles.colors.primary500
+        color: GlobalStyles.colors.primary800
+        // color: 'black'
     }
 });

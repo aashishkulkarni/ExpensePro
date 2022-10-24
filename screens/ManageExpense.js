@@ -16,7 +16,7 @@ function ManageExpense({ route, navigation }) {
 
     useLayoutEffect(() => {
         navigation.setOptions({
-            title: isEditing ? 'Edit Expense' : 'Add Expense'
+            title: isEditing ? 'Edit Category' : 'Add Category'
         });
     }, [navigation, isEditing]);
     // if we have no expense ID, then we are adding. If we have expense ID, then we are editing
@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 24,
         backgroundColor: GlobalStyles.colors.primary800
+        //backgroundColor: '#46627F'
     },
     buttons: {
         flexDirection: 'row',

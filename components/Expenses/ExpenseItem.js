@@ -27,7 +27,7 @@ function ExpenseItem({ id, description, amount, date }) {
 
                 </View>
                 <View style={styles.amountContainer}>
-                    <Text style={styles.amount}> Limit: ${amount.toFixed(2)} </Text>
+                    <Text style={styles.amount}>  ${amount.toFixed(2)} </Text>
                 </View>
             </View>
         </Pressable>
@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
     expenseItem: {
         padding: 12,
         marginVertical: 8,
-        backgroundColor: GlobalStyles.colors.primary500,
+        // backgroundColor: GlobalStyles.colors.primary500,
+        backgroundColor: 'white',
         flexDirection: 'row',
         justifyContent: 'space-between',
         borderRadius: 6,
@@ -55,7 +56,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.4
     },
     textBase: {
-        color: GlobalStyles.colors.primary50
+        // color: GlobalStyles.colors.primary50
+        color: 'black'
     },
     description: {
         fontSize: 16,
@@ -71,7 +73,8 @@ const styles = StyleSheet.create({
         borderRadius: 4
     },
     amount: {
-        color: GlobalStyles.colors.primary500,
+        // color: GlobalStyles.colors.primary500,
+        color: 'black',
         fontWeight: 'bold'
     }
 });

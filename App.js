@@ -20,10 +20,17 @@ function ExpensesOverview() {
   return <BottomTabs.Navigator
 
     screenOptions={({ navigation }) => ({
-      headerStyle: { backgroundColor: GlobalStyles.colors.primary500 },
+      headerStyle: { // backgroundColor: GlobalStyles.colors.primary500 
+        backgroundColor: '#46627F'
+
+      },
       headerTintColor: 'white',
-      tabBarStyle: { backgroundColor: GlobalStyles.colors.primary500 },
-      tabBarActiveTintColor: GlobalStyles.colors.accent500,
+      tabBarStyle: { //backgroundColor: GlobalStyles.colors.primary500 
+        backgroundColor: '#46627F'
+      },
+      // tabBarActiveTintColor: GlobalStyles.colors.accent500,
+      tabBarActiveTintColor: 'white',
+
 
       headerRight: ({ tintColor }) => (
         <IconButton
@@ -41,7 +48,7 @@ function ExpensesOverview() {
       name="RecentExpenses"
       component={RecentExpense}
       options={{
-        title: 'Recent Expenses',
+        title: 'Category Selector', //changes the title on top bar
         tabBarLabel: 'Recent Expenses',
         tabBarIcon: ({ color, size }) => (
 
@@ -56,7 +63,7 @@ function ExpensesOverview() {
       name="AllExpenses"
       component={AllExpenses}
       options={{
-        title: 'All Expenses',
+        title: 'Category Selector',
         tabBarLabel: 'All Expenses',
         tabBarIcon: ({ color, size }) => (
 
