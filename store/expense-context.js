@@ -5,34 +5,39 @@ const DUMMY_EXPENSES = [
 
     {
         id: '101',
-        title: 'food 1',
-        description: 'food',
+        description: 'Restaurant',
         amount: 600.00,
-        date: new Date('2021-10-05')
+        date: new Date('2022-10-05')
     },
     {
         id: '102',
-        description: 'clothing',
+        description: 'Clothing',
         amount: 300.00,
-        date: new Date('2021-10-11')
+        date: new Date('2022-10-11')
     },
     {
         id: '103',
-        description: 'groceries',
+        description: 'Groceries',
         amount: 100.00,
         date: new Date('2022-10-24')
     },
     {
         id: '104',
-        description: 'electronics',
+        description: 'Electronics',
         amount: 400.00,
-        date: new Date('2021-10-09')
+        date: new Date('2022-10-21')
     },
     {
         id: '105',
-        description: 'shopping',
+        description: 'Shopping',
         amount: 234.78,
         date: new Date('2022-10-22')
+    },
+    {
+        id: '106',
+        description: 'Home Mortgage',
+        amount: 2314.20,
+        date: new Date('2022-10-15')
     }
 
 ];
