@@ -44,10 +44,12 @@ function ManageExpense({ route, navigation }) {
             </View>
             {isEditing && (
                 <View style={styles.deleteContainer}>
-                    <IconButton icon="trash"
-                        color={GlobalStyles.colors.error500}
-                        size={36}
+                    <Text style={styles.text} > Delete Category </Text>
+                    <IconButton icon="close-circle-outline"
+                        color={GlobalStyles.colors.error50}
+                        size={70}
                         onPress={deleteExpenseHandler}
+
                     />
                 </View>
             )}
@@ -69,6 +71,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    text: {
+        color: 'white',
+        fontSize: '20',
+        fontWeight: '600'
     },
     button: {
         minWidth: 120,
