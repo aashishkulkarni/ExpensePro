@@ -38,6 +38,13 @@ const DUMMY_EXPENSES = [
         description: 'Home Mortgage',
         amount: 2314.20,
         date: new Date('2022-10-15')
+    },
+    {
+        id: '107',
+        title: 'Starbucks coffee',
+        description: 'Cafe',
+        amount: 25.00,
+        date: new Date('2022-10-21')
     }
 
 ];
