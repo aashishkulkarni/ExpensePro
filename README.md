@@ -26,3 +26,7 @@ Expense Pro aims simplify the process of understanding expenditure made using e-
 - Scan the QR code on the terminal using the Expo application on the mobile
 
 ## Demonstration of the application
+
+
+https://user-images.githubusercontent.com/87057054/198751167-8cc5e274-2ac2-4917-872e-33f5fe816511.mp4
+
