@@ -1,13 +1,13 @@
-import { View, Text, FlatList } from 'react-native';
-import ExpenseItem from './CategoryObject';
+import { FlatList } from 'react-native';
+import CategoryObject from './CategoryObject';
 
 function renderExpenseItem(itemData) {
-    return <ExpenseItem {...itemData.item} />
+    return <CategoryObject {...itemData.item} />
     {/** An expense object from the array in expenseoutput.js will be an item */ }
 
 }
 
-function ExpensesList({ expenses }) {
+function CategoryList({ expenses }) {
     return (
         <FlatList
             data={expenses}
@@ -17,4 +17,4 @@ function ExpensesList({ expenses }) {
     );
 }
 
-export default ExpensesList;
+export default CategoryList;

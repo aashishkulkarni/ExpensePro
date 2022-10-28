@@ -1,13 +1,13 @@
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import CategoryOutline from './CategoryOutline';
-import ExpensesList from './CategoryList';
+import CategoryList from './CategoryList';
 
 
 function ExpensesOutput({ expenses, expensesPeriod }) {
     return (
         <View style={styles.container}>
             <CategoryOutline expenses={expenses} periodName={expensesPeriod} />
-            <ExpensesList expenses={expenses} />
+            <CategoryList expenses={expenses} />
         </View>
     );
 }

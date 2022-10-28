@@ -1,13 +1,11 @@
 import { useContext, useLayoutEffect } from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { GlobalStyles } from '../components/constants/styles';
 import Button from '../components/UI/Button';
 import IconButton from '../components/UI/IconButton';
 import { ExpensesContext } from '../store/category-details';
 
-
-
-function ManageExpense({ route, navigation }) {
+function ManageCategories({ route, navigation }) {
 
     const expensesCtx = useContext(ExpensesContext);
 
@@ -59,14 +57,13 @@ function ManageExpense({ route, navigation }) {
     );
 }
 
-export default ManageExpense;
+export default ManageCategories;
 
 const styles = StyleSheet.create({
 
     container: {
         flex: 1,
         padding: 24,
-        // backgroundColor: GlobalStyles.colors.primary800
         backgroundColor: '#46627F'
     },
     buttons: {
