@@ -1,4 +1,4 @@
-![ExpensePro logo](img/ExpenseProLogo.png)
+![ExpensePrologo](img/Logo.png)
 
 # ExpensePro
 
