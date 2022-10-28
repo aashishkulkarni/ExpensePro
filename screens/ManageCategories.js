@@ -1,5 +1,5 @@
 import { useContext, useLayoutEffect } from 'react';
-import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, View } from 'react-native';
 import { GlobalStyles } from '../components/constants/styles';
 import Button from '../components/UI/Button';
 import IconButton from '../components/UI/IconButton';
@@ -66,8 +66,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 24,
-        backgroundColor: GlobalStyles.colors.primary800
-        //backgroundColor: '#46627F'
+        // backgroundColor: GlobalStyles.colors.primary800
+        backgroundColor: '#46627F'
     },
     buttons: {
         flexDirection: 'row',

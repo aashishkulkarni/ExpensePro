@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet } from 'react-native';
 import { GlobalStyles } from '../constants/styles'
 
-function ExpensesSummary({ expenses, periodName }) {
+function CategoryOutline({ expenses, periodName }) {
     const expenseSum = expenses.reduce((sum, expense) => {
         return sum + expense.amount //assume that expense is an object that has amount property
     }, 0); // '0' is the starting value for sum
@@ -16,7 +16,7 @@ function ExpensesSummary({ expenses, periodName }) {
     );
 }
 
-export default ExpensesSummary;
+export default CategoryOutline;
 
 const styles = StyleSheet.create({
 
