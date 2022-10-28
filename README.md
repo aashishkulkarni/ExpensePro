@@ -1,6 +1,6 @@
-# ExpensePro
+![ExpensePro logo](img/ExpenseProLogo.png)
 
-![ExpensePro logo](img/Logo.png)
+# ExpensePro
 
 Expense Pro aims simplify the process of understanding expenditure made using e-Wallets. By simply connecting your e-Wallet to the app, ExpensePro categorizes your expenditure automatically to help you evaluate your expenditure pattern. This application has been built using React Native.
 
