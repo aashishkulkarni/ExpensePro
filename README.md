@@ -19,8 +19,9 @@ Expense Pro aims simplify the process of understanding expenditure made using e-
 
 ## Steps to install the GitHub repository
 
-- Download this repository using `git clone https://github.com/aashkul/ExpensePro.git`
-- Input `npm install` in the terminal to download files
+- Download this repository using:
+  - `git clone https://github.com/aashkul/ExpensePro.git`
+- Input `npm install` in the terminal
 - Input `npm start` in the terminal to start the server
 - Scan the QR code on the terminal using the Expo application on the mobile
 
