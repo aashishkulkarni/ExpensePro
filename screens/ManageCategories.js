@@ -51,7 +51,6 @@ function ManageExpense({ route, navigation }) {
                         color={GlobalStyles.colors.error50}
                         size={70}
                         onPress={deleteExpenseHandler}
-
                     />
                 </View>
 
