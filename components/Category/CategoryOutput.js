@@ -1,6 +1,6 @@
 import { View, Text, FlatList, StyleSheet } from 'react-native';
-import ExpensesSummary from './ExpensesSummary';
-import ExpensesList from './ExpensesList';
+import ExpensesSummary from './CategoryOutline';
+import ExpensesList from './CategoryList';
 import { GlobalStyles } from '../constants/styles';
 
 

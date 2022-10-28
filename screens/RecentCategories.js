@@ -1,6 +1,6 @@
-import ExpensesOutput from "../components/Expenses/ExpensesOutput";
+import ExpensesOutput from "../components/Category/CategoryOutput";
 import { useContext } from 'react';
-import { ExpensesContext } from '../store/expense-context';
+import { ExpensesContext } from '../store/category-details';
 import { getDateMinusDays } from '../util/date';
 
 function RecentExpense() {
@@ -15,7 +15,7 @@ function RecentExpense() {
 
 
     return (
-        <ExpensesOutput expenses={recentExpenses} expensesPeriod="Last Week" />
+        <ExpensesOutput expenses={recentExpenses} expensesPeriod='Expenditure in last 7 days' />
     );
 }
 

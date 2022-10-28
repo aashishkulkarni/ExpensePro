@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     period: {
-        fontSize: 12,
+        fontSize: 15,
+        fontWeight: '600',
         color: GlobalStyles.colors.primary800
     },
     sum: {

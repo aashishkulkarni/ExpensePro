@@ -1,9 +1,9 @@
 import { useContext, useLayoutEffect } from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 import { GlobalStyles } from '../components/constants/styles';
 import Button from '../components/UI/Button';
 import IconButton from '../components/UI/IconButton';
-import { ExpensesContext } from '../store/expense-context';
+import { ExpensesContext } from '../store/category-details';
 
 
 
@@ -42,9 +42,11 @@ function ManageExpense({ route, navigation }) {
                 </Button>
                 <Button style={styles.button} onPress={confirmHandler}> {isEditing ? 'Update' : 'Add'} </Button>
             </View>
+
             {isEditing && (
+
                 <View style={styles.deleteContainer}>
-                    <Text style={styles.text} > Delete Category </Text>
+
                     <IconButton icon="close-circle-outline"
                         color={GlobalStyles.colors.error50}
                         size={70}
@@ -52,6 +54,7 @@ function ManageExpense({ route, navigation }) {
 
                     />
                 </View>
+
             )}
         </View>
     );
@@ -75,7 +78,7 @@ const styles = StyleSheet.create({
     text: {
         color: 'white',
         fontSize: '20',
-        fontWeight: '600'
+        fontWeight: '60'
     },
     button: {
         minWidth: 120,

@@ -5,55 +5,68 @@ const DUMMY_EXPENSES = [
 
     {
         id: '101',
-        description: 'Restaurant',
-        amount: 600.00,
-        date: new Date('2022-10-05')
+        title: 'Auckland apartment',
+        category: 'Mortgage',
+        amount: 2314.20,
+        date: new Date('2022-10-15'),
+        item: 1
     },
     {
         id: '102',
-        description: 'Clothing',
-        amount: 300.00,
-        date: new Date('2022-10-11')
+        title: 'East restaurant',
+        category: 'Restaurant',
+        amount: 165.00,
+        date: new Date('2022-10-05'),
+        item: 4
     },
     {
         id: '103',
-        description: 'Groceries',
-        amount: 100.00,
-        date: new Date('2022-10-24')
+        title: 'PB Tech Auckland',
+        category: 'Electronics',
+        amount: 400.00,
+        date: new Date('2022-10-21'),
+        item: 3
     },
     {
         id: '104',
-        description: 'Electronics',
-        amount: 400.00,
-        date: new Date('2022-10-21')
+        title: 'H&M Auckland',
+        category: 'Clothing',
+        amount: 320.10,
+        date: new Date('2022-10-11'),
+        item: 2
     },
     {
         id: '105',
-        description: 'Shopping',
+        title: 'Westfield',
+        category: 'Shopping',
         amount: 234.78,
-        date: new Date('2022-10-22')
+        date: new Date('2022-10-22'),
+        item: 3
     },
     {
         id: '106',
-        description: 'Home Mortgage',
-        amount: 2314.20,
-        date: new Date('2022-10-15')
+        title: 'Countdown NZ',
+        category: 'Groceries',
+        amount: 108.30,
+        date: new Date('2022-10-24'),
+        item: 5
     },
     {
         id: '107',
         title: 'Starbucks coffee',
-        description: 'Cafe',
-        amount: 25.00,
-        date: new Date('2022-10-21')
+        category: 'Cafe',
+        amount: 25.72,
+        date: new Date('2022-10-21'),
+        item: 2
     }
 
 ];
 
 export const ExpensesContext = createContext({
     expenses: [],
-    addExpense: ({ description, amount, date }) => { },
+    addExpense: ({ category, amount, date }) => { },
     deleteExpense: (id) => { },
-    updateExpense: (id, { description, amount, date }) => { },
+    updateExpense: (id, { category, amount, date }) => { },
 });
 
 function expensesReducer(state, action) {

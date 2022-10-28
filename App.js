@@ -5,13 +5,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 //importing all the screens
-import AllExpenses from './screens/AllExpenses';
-import ManageExpense from './screens/ManageExpense';
-import RecentExpense from './screens/RecentExpense';
+import AllExpenses from './screens/AllCategories';
+import ManageExpense from './screens/ManageCategories';
+import RecentExpense from './screens/RecentCategories';
 import { GlobalStyles } from './components/constants/styles';
 import IconButton from './components/UI/IconButton';
 import { useNavigation } from "@react-navigation/native";
-import ExpensesContextProvider from './store/expense-context';
+import ExpensesContextProvider from './store/category-details';
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
 
@@ -48,7 +48,7 @@ function ExpensesOverview() {
       name="RecentExpenses"
       component={RecentExpense}
       options={{
-        title: 'Category Selector', //changes the title on top bar
+        title: 'Category Expenditure', //changes the title on top bar
         tabBarLabel: 'Recent Expenses',
         tabBarIcon: ({ color, size }) => (
 
@@ -63,7 +63,7 @@ function ExpensesOverview() {
       name="AllExpenses"
       component={AllExpenses}
       options={{
-        title: 'Category Selector',
+        title: 'Category Expenditure',
         tabBarLabel: 'All Expenses',
         tabBarIcon: ({ color, size }) => (
 
