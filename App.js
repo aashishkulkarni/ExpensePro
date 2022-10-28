@@ -21,7 +21,7 @@ function ExpensesOverview() {
 
     screenOptions={({ navigation }) => ({
       headerStyle: { // backgroundColor: GlobalStyles.colors.primary500 
-        backgroundColor: '#46627F'
+        backgroundColor: '#46627F',
 
       },
       headerTintColor: 'white',
