@@ -1,28 +1,25 @@
 import { View, Text, StyleSheet } from 'react-native';
-import { GlobalStyles } from '../constants/styles'
 
-function ExpensesSummary({ expenses, periodName }) {
+
+function CategoryOutline({ expenses, periodName }) {
     const expenseSum = expenses.reduce((sum, expense) => {
-        return sum + expense.amount //assume that expense is an object that has amount property
-    }, 0); // '0' is the starting value for sum
+        return sum + expense.amount
+    }, 0);
 
     return (
         <View style={styles.container}>
             <Text style={styles.period}> {periodName} </Text>
             <Text style={styles.sum}> ${expenseSum.toFixed(2)}</Text>
-            {/* 'toFixed': Number of digits after the decimal point. 
-            output will be till 2 decimal places.*/}
         </View>
     );
 }
 
-export default ExpensesSummary;
+export default CategoryOutline;
 
 const styles = StyleSheet.create({
 
     container: {
         padding: 8,
-        // backgroundColor: GlobalStyles.colors.primary50,
         backgroundColor: 'white',
         borderRadius: 5,
         flexDirection: 'row',
@@ -32,12 +29,11 @@ const styles = StyleSheet.create({
     period: {
         fontSize: 15,
         fontWeight: '600',
-        color: GlobalStyles.colors.primary800
+        color: '#21618C'
     },
     sum: {
         fontSize: 16,
         fontWeight: 'bold',
-        color: GlobalStyles.colors.primary800
-        // color: 'black'
+        color: '#21618C'
     }
 });

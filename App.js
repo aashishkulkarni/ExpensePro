@@ -1,17 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-//importing all the screens
-import AllExpenses from './screens/AllCategories';
-import ManageExpense from './screens/ManageCategories';
-import RecentExpense from './screens/RecentCategories';
-import { GlobalStyles } from './components/constants/styles';
+import AllCategories from './screens/AllCategories';
+import RecentCategories from './screens/RecentCategories';
 import IconButton from './components/UI/IconButton';
 import { useNavigation } from "@react-navigation/native";
 import ExpensesContextProvider from './store/category-details';
+import ManageCategories from './screens/ManageCategories';
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
 
@@ -20,15 +17,15 @@ function ExpensesOverview() {
   return <BottomTabs.Navigator
 
     screenOptions={({ navigation }) => ({
-      headerStyle: { // backgroundColor: GlobalStyles.colors.primary500 
-        backgroundColor: '#46627F'
+      headerStyle: {
+        backgroundColor: '#46627F',
 
       },
       headerTintColor: 'white',
-      tabBarStyle: { //backgroundColor: GlobalStyles.colors.primary500 
+      tabBarStyle: {
         backgroundColor: '#46627F'
       },
-      // tabBarActiveTintColor: GlobalStyles.colors.accent500,
+
       tabBarActiveTintColor: 'white',
 
 
@@ -46,9 +43,9 @@ function ExpensesOverview() {
   >
     <BottomTabs.Screen
       name="RecentExpenses"
-      component={RecentExpense}
+      component={RecentCategories}
       options={{
-        title: 'Category Expenditure', //changes the title on top bar
+        title: 'Category Expenditure',
         tabBarLabel: 'Recent Expenses',
         tabBarIcon: ({ color, size }) => (
 
@@ -61,7 +58,7 @@ function ExpensesOverview() {
 
     <BottomTabs.Screen
       name="AllExpenses"
-      component={AllExpenses}
+      component={AllCategories}
       options={{
         title: 'Category Expenditure',
         tabBarLabel: 'All Expenses',
@@ -84,7 +81,7 @@ export default function App() {
         <NavigationContainer>
           <Stack.Navigator screenOptions={{
             headerStyle: {
-              backgroundColor: GlobalStyles.colors.primary500,
+              backgroundColor: '#46627F',
               headerTintColor: 'white'
             }
           }}>
@@ -93,7 +90,7 @@ export default function App() {
               component={ExpensesOverview}
               options={{ headerShown: false }}
             />
-            <Stack.Screen name="ManageExpense" component={ManageExpense}
+            <Stack.Screen name="ManageExpense" component={ManageCategories}
               options={{
                 presentation: 'modal'
               }}

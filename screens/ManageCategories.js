@@ -1,13 +1,10 @@
 import { useContext, useLayoutEffect } from 'react';
-import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
-import { GlobalStyles } from '../components/constants/styles';
+import { StyleSheet, View } from 'react-native';
 import Button from '../components/UI/Button';
 import IconButton from '../components/UI/IconButton';
 import { ExpensesContext } from '../store/category-details';
 
-
-
-function ManageExpense({ route, navigation }) {
+function ManageCategories({ route, navigation }) {
 
     const expensesCtx = useContext(ExpensesContext);
 
@@ -48,7 +45,7 @@ function ManageExpense({ route, navigation }) {
                 <View style={styles.deleteContainer}>
 
                     <IconButton icon="close-circle-outline"
-                        color={GlobalStyles.colors.error50}
+                        color={'#A10500'}
                         size={70}
                         onPress={deleteExpenseHandler}
                     />
@@ -59,15 +56,14 @@ function ManageExpense({ route, navigation }) {
     );
 }
 
-export default ManageExpense;
+export default ManageCategories;
 
 const styles = StyleSheet.create({
 
     container: {
         flex: 1,
         padding: 24,
-        backgroundColor: GlobalStyles.colors.primary800
-        //backgroundColor: '#46627F'
+        backgroundColor: '#46627F'
     },
     buttons: {
         flexDirection: 'row',
@@ -87,7 +83,7 @@ const styles = StyleSheet.create({
         marginTop: 16,
         paddingTop: 8,
         borderTopWidth: 2,
-        borderTopColor: GlobalStyles.colors.primary200,
+        borderTopColor: '#A9CCE3',
         alignItems: 'center'
     }
 
