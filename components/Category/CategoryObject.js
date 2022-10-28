@@ -1,5 +1,5 @@
 import { Pressable, View, StyleSheet, Text } from "react-native";
-import { GlobalStyles } from '../constants/styles';
+
 import { useNavigation } from "@react-navigation/native";
 import { getFormattedDate } from '../../util/date';
 
@@ -23,7 +23,6 @@ function ExpenseItem({ id, category, amount, item }) {
             <View style={styles.expenseItem}>
                 <View>
                     <Text style={[styles.textBase, styles.description]}>{category}</Text>
-                    {/* <Text style={styles.textBase}> {getFormattedDate(date)} </Text> */}
                     <Text> Items: {item} </Text>
 
                 </View>
@@ -45,19 +44,17 @@ const styles = StyleSheet.create({
     expenseItem: {
         padding: 12,
         marginVertical: 8,
-        // backgroundColor: GlobalStyles.colors.primary500,
         backgroundColor: 'white',
         flexDirection: 'row',
         justifyContent: 'space-between',
         borderRadius: 6,
         elevation: 3,
-        shadowColor: GlobalStyles.colors.gray500,
+        shadowColor: '#212F3C',
         shadowRadius: 4,
         shadowOffset: { width: 1, height: 1 },
         shadowOpacity: 0.4
     },
     textBase: {
-        // color: GlobalStyles.colors.primary50
         color: 'black'
     },
     description: {
@@ -74,7 +71,6 @@ const styles = StyleSheet.create({
         borderRadius: 4
     },
     amount: {
-        // color: GlobalStyles.colors.primary500,
         color: 'black',
         fontWeight: 'bold'
     }

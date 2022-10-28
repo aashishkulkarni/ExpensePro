@@ -1,6 +1,5 @@
 import { useContext, useLayoutEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { GlobalStyles } from '../components/constants/styles';
 import Button from '../components/UI/Button';
 import IconButton from '../components/UI/IconButton';
 import { ExpensesContext } from '../store/category-details';
@@ -46,7 +45,7 @@ function ManageCategories({ route, navigation }) {
                 <View style={styles.deleteContainer}>
 
                     <IconButton icon="close-circle-outline"
-                        color={GlobalStyles.colors.error50}
+                        color={'#A10500'}
                         size={70}
                         onPress={deleteExpenseHandler}
                     />
@@ -84,7 +83,7 @@ const styles = StyleSheet.create({
         marginTop: 16,
         paddingTop: 8,
         borderTopWidth: 2,
-        borderTopColor: GlobalStyles.colors.primary200,
+        borderTopColor: '#A9CCE3',
         alignItems: 'center'
     }
 

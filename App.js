@@ -1,12 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import AllCategories from './screens/AllCategories';
 import RecentCategories from './screens/RecentCategories';
-import { GlobalStyles } from './components/constants/styles';
 import IconButton from './components/UI/IconButton';
 import { useNavigation } from "@react-navigation/native";
 import ExpensesContextProvider from './store/category-details';
@@ -19,15 +17,15 @@ function ExpensesOverview() {
   return <BottomTabs.Navigator
 
     screenOptions={({ navigation }) => ({
-      headerStyle: { // backgroundColor: GlobalStyles.colors.primary500 
+      headerStyle: {
         backgroundColor: '#46627F',
 
       },
       headerTintColor: 'white',
-      tabBarStyle: { //backgroundColor: GlobalStyles.colors.primary500 
+      tabBarStyle: {
         backgroundColor: '#46627F'
       },
-      // tabBarActiveTintColor: GlobalStyles.colors.accent500,
+
       tabBarActiveTintColor: 'white',
 
 
@@ -47,7 +45,7 @@ function ExpensesOverview() {
       name="RecentExpenses"
       component={RecentCategories}
       options={{
-        title: 'Category Expenditure', //changes the title on top bar
+        title: 'Category Expenditure',
         tabBarLabel: 'Recent Expenses',
         tabBarIcon: ({ color, size }) => (
 
