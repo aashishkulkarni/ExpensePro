@@ -47,4 +47,4 @@ https://user-images.githubusercontent.com/87057054/198751167-8cc5e274-2ac2-4917-
 
 ## Link to the YouTube video
 
-- Click here to watch the YouTube video: [ExpensePro YouTube Video](https://docs.expo.dev/get-started/installation/)
+- Click here to watch the YouTube video: [ExpensePro (Milestone 2)](https://www.youtube.com/watch?v=VqyX9l7eXG8)
