@@ -41,6 +41,22 @@ function ExpensesOverview() {
       ),
     })}
   >
+
+
+    <BottomTabs.Screen
+      name="AllExpenses"
+      component={AllCategories}
+      options={{
+        title: 'Category Expenditure',
+        tabBarLabel: 'All Expenses',
+        tabBarIcon: ({ color, size }) => (
+
+          <Ionicons name="analytics" size={size} color={color} />
+
+        )
+      }}
+    />
+
     <BottomTabs.Screen
       name="RecentExpenses"
       component={RecentCategories}
@@ -56,20 +72,7 @@ function ExpensesOverview() {
     />
 
 
-    <BottomTabs.Screen
-      name="AllExpenses"
-      component={AllCategories}
-      options={{
-        title: 'Category Expenditure',
-        tabBarLabel: 'All Expenses',
-        tabBarIcon: ({ color, size }) => (
 
-          <Ionicons name="analytics" size={size} color={color} />
-
-        )
-      }}
-
-    />
   </BottomTabs.Navigator>
 }
 
