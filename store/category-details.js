@@ -32,7 +32,7 @@ const SAMPLE_EXPENDITURE = [
         title: 'H&M Auckland',
         category: 'Clothing',
         amount: 320.10,
-        date: new Date('2022-10-11'),
+        date: new Date('2022-10-30'),
         item: 2
     },
     {
@@ -56,7 +56,7 @@ const SAMPLE_EXPENDITURE = [
         title: 'Starbucks coffee',
         category: 'Cafe',
         amount: 25.72,
-        date: new Date('2022-10-21'),
+        date: new Date('2022-10-30'),
         item: 2
     }
 
